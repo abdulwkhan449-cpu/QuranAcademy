@@ -1602,11 +1602,18 @@ p {
     .stat-number {
         font-size: 2.2rem;
     }
-    .stat-countries-text {
-        font-size: 0.9rem;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+/* Add these rules inside your @media (max-width: 768px) block */
+.stat-item.stat-countries {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.stat-countries-text {
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
     .cta-banner {
         padding: 60px 0;
     }
