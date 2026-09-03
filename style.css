@@ -1602,18 +1602,22 @@ p {
     .stat-number {
         font-size: 2.2rem;
     }
-/* Add these rules inside your @media (max-width: 768px) block */
-.stat-item.stat-countries {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-.stat-countries-text {
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-}
+    .stat-countries-text {
+        font-size: 0.9rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .stat-item.stat-countries {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .stat-countries-text {
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+    }
     .cta-banner {
         padding: 60px 0;
     }
@@ -1655,6 +1659,47 @@ p {
     }
 }
 
+/* ===== 486px MEDIA QUERY ===== */
+@media (max-width: 486px) {
+    .statistics-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        justify-items: center;
+    }
+    .stat-item {
+        padding: 6px 0;
+        text-align: center;
+    }
+    .stat-item.stat-countries {
+        grid-column: 1 / -1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+    }
+    .stat-countries-text {
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        font-size: 0.85rem;
+        gap: 4px;
+    }
+    .stat-countries-text i {
+        font-size: 1.1rem;
+    }
+    .stat-number {
+        font-size: 1.6rem;
+    }
+    .stat-label {
+        font-size: 0.7rem;
+    }
+    .stat-divider {
+        display: none;
+    }
+}
+
 @media (max-width: 480px) {
     .container {
         padding: 0 16px;
@@ -1693,10 +1738,6 @@ p {
     }
     .service-card {
         min-height: 260px;
-    }
-    .statistics-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 16px;
     }
     .stat-number {
         font-size: 1.8rem;
